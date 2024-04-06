@@ -9,6 +9,8 @@ WORKDIR /app
 COPY pnpm-lock.yaml ./  
 RUN pnpm fetch
 
+RUN pnpm install -g @nestjs/cli
+
 COPY . .
 
 RUN pnpm install  
